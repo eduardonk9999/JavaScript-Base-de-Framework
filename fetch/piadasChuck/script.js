@@ -1,0 +1,1 @@
+const piadaChock = fetch('https://api.chucknorris.io/jakoes/random');
