@@ -40,4 +40,6 @@ const enderecoONJ = {
     pais: "Brasil",
     numero: 50,
 }
+
+
 const enderecoJSON = JSON.stringify(enderecoJSON);
