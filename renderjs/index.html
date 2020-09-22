@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render JS</title>
+</head>
+
+<body>
+    <main class="tela">
+
+    </main>
+
+
+
+    <script>
+        const techs = [
+            {
+              name: 'Html',
+              likes: 0 ,
+            },
+            {
+                name: 'CSS',
+                likes: 100  
+            },   
+               
+            {
+                name: 'JavaScript',
+              likes: 0,  
+            }
+        ];
+
+        function handleClick(techName){
+            console.log('teste', techName);
+
+            techs.forEach((currentTech) => {
+                if(techName === currentTech.name) {
+                    console.log('Atualiza os likes do: ', techName);
+
+                    currentTech.likes = currentTech.likes + 1;
+                }
+            });
+
+            render();
+        }
+
+        const buttonTemplate = function (tech) {
+            return `<button class="btn" onclick="handleClick('${tech.name}')">
+                <span>${tech.name}</span>
+                <span class="contador">${tech.likes}</span>
+            </button>`;
+        }
+
+
+        function render() {
+            const $tela = document.querySelector('.tela');
+
+            $tela.innerHTML = techs.map((tech) => {
+                return buttonTemplate(tech);
+                // return `<button>${tech}</button>`;
+            }).join(' ');
+
+        }
+        render();
+    </script>
+
+</body>
+
+</html>
