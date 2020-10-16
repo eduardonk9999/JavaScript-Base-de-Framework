@@ -1,0 +1,9 @@
+MAP
+Você quer obter um novo array com a mesma quantidade de itens do array original mas, com cada item transformado.
+
+FILTER
+Se eu tenho um array e quero gerar um array com menos itens que o array original.
+
+
+REDUCE
+Se eu tenho um array e quero gerar um outro tipo de valor.

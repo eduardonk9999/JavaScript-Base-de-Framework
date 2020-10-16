@@ -21,7 +21,7 @@ const productList = cart.reduce((acc, { name }) => {
 
 // Objeto
 const productList = cart.reduce((acc, { name }) => {
-
+S
 }, {});
 
 
